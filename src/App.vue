@@ -1,28 +1,73 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
-  </div>
+  <layout
+    id="app"
+    navbar-class="bg-primary"
+    :items="navItems"
+    width="250px"
+    :mobile-fullscreen="true"
+    shadow
+  >
+    <template v-slot:navbar-content>
+      <b-navbar-brand>Vue Sidebar Bootstrap</b-navbar-brand>
+      <b-navbar-nav class="ml-auto">
+        <b-nav-item>Foo</b-nav-item>
+        <b-nav-item>Bar</b-nav-item>
+      </b-navbar-nav>
+    </template>
+
+    <template v-slot:footer>
+      <div class="p-3">
+        Created By <a href="https://danielkiss.me">Daniel Kiss</a> &copy;
+      </div>
+    </template>
+  </layout>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import Layout from './components/Layout.vue';
 
 export default {
-  name: "App",
+  name: 'App',
   components: {
-    HelloWorld
+    Layout
+  },
+  data() {
+    return {
+      navItems: [
+        {
+          name: 'Introduction',
+          children: [
+            {
+              text: 'Get Started',
+              icon: 'file-earmark-play',
+              children: [
+                { text: 'Introduction', link: '/introduction', icon: 'cup' },
+                { text: 'Installation', link: '/install', icon: 'wrench' },
+                { text: 'Basic usage', link: '/usage', icon: 'command' }
+              ]
+            },
+            { text: 'Icons', link: '/icons', icon: 'bootstrap' },
+            {
+              text: 'Layout Component',
+              link: '/integrate',
+              icon: 'layout-sidebar'
+            }
+          ]
+        },
+        {
+          name: 'API',
+          children: [
+            { text: 'Slots', link: '/slots', icon: 'layers' },
+            { text: 'Properties', link: '/props', icon: 'journal-text' },
+            { text: 'Events', link: '/events', icon: 'calendar3' }
+          ]
+        },
+        {
+          name: 'Support',
+          children: [{ text: 'Contribute', link: '/contribute', icon: 'bug' }]
+        }
+      ]
+    };
   }
 };
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
