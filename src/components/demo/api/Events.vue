@@ -1,7 +1,7 @@
 <template>
   <div id="events">
     <h3>Events</h3>
-    <h4>&lt;sidebar /&gt; component</h4>
+    <h4>&lt;vsb-sidebar /&gt; component</h4>
     <b-table :items="sidebarEvents"></b-table>
   </div>
 </template>

@@ -18,7 +18,7 @@
       }
     </pre>
     <p>Then add it to your template where you would like to place it.</p>
-    <pre v-pre>&lt;sidebar :items="navItems" /&gt;</pre>
+    <pre v-pre>&lt;vsb-sidebar :items="navItems" /&gt;</pre>
     <p>
       As you've seen, the only thing you need to add is the
       <span class="font-italic">navItems</span> property which contains the menu

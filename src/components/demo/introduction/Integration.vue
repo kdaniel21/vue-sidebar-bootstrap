@@ -16,22 +16,11 @@
       discovered anything that would overcome the one the package using.
     </p>
     <h5>The Layout Component</h5>
-    <pre v-pre>
-      <span class="font-weight-bold">import {{ Layout }} from 'vue-sidebar-bootstrap'</span>
-
-      export default {
-        name: 'YourComponent',
-        <span class="font-weight-bold">components: {
-          Layout
-          ...
-        }</span>
-      }
-    </pre>
     <p>
       There is also a
-      <span class="font-weight-bold">&lt;layout /&gt;</span> component available
-      that initializes a layout similar to what this demo site has. It creates a
-      sidebar, a navbar (that is customizable through the
+      <span class="font-weight-bold">&lt;vsb-layout /&gt;</span> component
+      available that initializes a layout similar to what this demo site has. It
+      creates a sidebar, a navbar (that is customizable through the
       <span class="font-weight-bold">navbar-content</span> slot and the
       <span class="font-weight-bold">navbar-class</span> prop) and a fluid
       <span class="font-italic">b-container</span> with a
@@ -43,7 +32,7 @@
       the sidebar, they are going to be applied.
     </p>
     <pre v-pre>
-&lt;layout navbar-class="bg-primary" :items="navItems" width="250px" shadow&gt;
+&lt;vsb-layout navbar-class="bg-primary" :items="navItems" width="250px" shadow&gt;
   &lt;template v-slot:navbar-content&gt;
   ...YOUR NAVBAR CONTENT...
   &lt;/template&gt;

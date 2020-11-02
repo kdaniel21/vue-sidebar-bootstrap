@@ -1,7 +1,7 @@
 <template>
   <div id="props">
     <h3>Properties</h3>
-    <h4>&lt;sidebar /&gt; component</h4>
+    <h4>&lt;vsb-sidebar /&gt; component</h4>
     <p class="mb-1">
       The sidebar component extends the b-sidebar, hence it offers everything
       that the b-sidebar does.
@@ -15,7 +15,7 @@
     <!-- TODO: mobile-fullscreen inside a table -->
     <b-table :items="sidebarProps"> </b-table>
 
-    <h4>&lt;layout /&gt; component</h4>
+    <h4>&lt;vsb-layout /&gt; component</h4>
     <p>
       All of the above mentioned properties can be passed to this component and
       everything will be passed down to the sidebar except the following.

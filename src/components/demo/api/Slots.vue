@@ -1,7 +1,7 @@
 <template>
   <div id="slots">
     <h3>Slots</h3>
-    <h4>&lt;sidebar /&gt; component</h4>
+    <h4>&lt;vsb-sidebar /&gt; component</h4>
     <p>
       Every slot provided by the default b-sidebar component is available.
       <a
@@ -12,7 +12,7 @@
     <h5>Additional Slots</h5>
     <b-table :items="sidebarSlots"></b-table>
 
-    <h4>&lt;layout /&gt; component</h4>
+    <h4>&lt;vsb-layout /&gt; component</h4>
     <p>
       Every above mentioned slot can be passed here and they will get passed to
       the sidebar.
