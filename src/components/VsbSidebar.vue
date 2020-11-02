@@ -41,23 +41,23 @@
             <h6 class="ml-2">{{ section.name }}</h6>
           </slot>
           <div v-for="(item, index) in section.children" :key="item.text">
-            <sidebar-item :item="item" :index="index">
+            <vsb-sidebar-item :item="item" :index="index">
               <slot name="dropdown-icon">
-                <sidebar-item-icon
+                <vsb-sidebar-item-icon
                   v-if="item.children"
                   v-b-toggle="`nav-item-${index}`"
                   icon="chevron-right"
                   style="width: 0.7em"
                 />
               </slot>
-            </sidebar-item>
+            </vsb-sidebar-item>
             <b-collapse
               v-if="item.children"
               :id="`nav-item-${index}`"
               class="pl-3"
             >
               <b-list-group flush>
-                <sidebar-item
+                <vsb-sidebar-item
                   v-for="childItem in item.children"
                   :key="childItem.text"
                   :item="childItem"
@@ -77,8 +77,8 @@
 </template>
 
 <script>
-import SidebarItem from '@/components/SidebarItem';
-import SidebarItemIcon from '@/components/SidebarItemIcon';
+import VsbSidebarItem from '@/components/VsbSidebarItem';
+import VsbSidebarItemIcon from '@/components/VsbSidebarItemIcon';
 
 export default {
   name: 'Sidebar',
@@ -97,8 +97,8 @@ export default {
     }
   },
   components: {
-    SidebarItem,
-    SidebarItemIcon
+    VsbSidebarItem,
+    VsbSidebarItemIcon
   },
   data() {
     return {

@@ -9,7 +9,7 @@
 
 <script>
 export default {
-  name: 'SidebarItemIcon',
+  name: 'VsbSidebarItemIcon',
   props: {
     icon: {
       type: [Object, String],

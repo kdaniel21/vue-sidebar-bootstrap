@@ -8,7 +8,7 @@
     :disabled="item.disabled"
   >
     <span>
-      <sidebar-item-icon :icon="item.icon" class="mr-3" />
+      <vsb-sidebar-item-icon :icon="item.icon" class="mr-3" />
       <span :class="{ small: textSmall }">{{ item.text }}</span>
     </span>
     <slot></slot>
@@ -16,10 +16,10 @@
 </template>
 
 <script>
-import SidebarItemIcon from '@/components/SidebarItemIcon';
+import VsbSidebarItemIcon from '@/components/VsbSidebarItemIcon';
 
 export default {
-  name: 'SidebarItem',
+  name: 'VsbSidebarItem',
   props: {
     item: {
       type: Object,
@@ -35,7 +35,7 @@ export default {
     }
   },
   components: {
-    SidebarItemIcon
+    VsbSidebarItemIcon
   }
 };
 </script>

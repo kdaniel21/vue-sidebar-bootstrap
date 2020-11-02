@@ -2,7 +2,7 @@
   <div id="layout" :style="sidebarStyling">
     <!-- NAVBAR -->
     <b-navbar id="navbar" :class="navbarClass">
-      <sidebar
+      <vsb-sidebar
         @change="val => (sidebarOpen = val)"
         @is-mobile="val => (isMobile = val)"
         v-bind="$attrs"
@@ -11,7 +11,7 @@
         <template v-for="(_, slot) of $scopedSlots" v-slot:[slot]="scope">
           <slot :name="slot" v-bind="scope" />
         </template>
-      </sidebar>
+      </vsb-sidebar>
       <slot name="navbar-content"></slot>
     </b-navbar>
 
@@ -25,12 +25,12 @@
 </template>
 
 <script>
-import Sidebar from '@/components/Sidebar';
+import VsbSidebar from '@/components/VsbSidebar';
 
 export default {
   name: 'Layout',
   components: {
-    Sidebar
+    VsbSidebar
   },
   props: {
     navbarClass: {
