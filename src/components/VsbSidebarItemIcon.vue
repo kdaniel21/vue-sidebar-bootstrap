@@ -1,6 +1,6 @@
 <template>
   <component
-    v-if="icon"
+    v-if="icon && Object.keys(icon).length"
     :is="icon.tag ? icon.tag : 'b-icon'"
     :icon="!icon.tag ? icon : icon.attributes.icon"
     v-bind="icon.attributes"
