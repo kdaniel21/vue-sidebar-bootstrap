@@ -13,7 +13,7 @@ export default {
   props: {
     icon: {
       type: [Object, String],
-      default: null
+      default: () => {}
     }
   }
 };
