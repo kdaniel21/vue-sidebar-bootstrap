@@ -1,12 +1,7 @@
 <template>
-  <div>
+  <div class="align-self-end">
     <slot name="toggle-icon">
-      <b-icon
-        v-b-toggle.sidebar
-        icon="list"
-        class="h3 m-2 d-md-none"
-        style="vertical-align: none"
-      ></b-icon>
+      <b-icon v-b-toggle.sidebar icon="list" class="h3 m-2 d-md-none"></b-icon>
     </slot>
 
     <b-sidebar
