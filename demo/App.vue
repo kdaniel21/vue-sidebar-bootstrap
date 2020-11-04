@@ -34,9 +34,6 @@ export default {
   data() {
     return {
       navItems: [
-        // {
-        //   name: 'Introduction',
-        //   children: [
         {
           text: 'Get Started',
           icon: 'file-earmark-play',
@@ -52,8 +49,6 @@ export default {
           link: '/integrate',
           icon: 'layout-sidebar'
         },
-        //   ]
-        // },
         {
           name: 'API',
           children: [
