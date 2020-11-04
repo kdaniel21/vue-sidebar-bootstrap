@@ -34,26 +34,26 @@ export default {
   data() {
     return {
       navItems: [
+        // {
+        //   name: 'Introduction',
+        //   children: [
         {
-          name: 'Introduction',
+          text: 'Get Started',
+          icon: 'file-earmark-play',
           children: [
-            {
-              text: 'Get Started',
-              icon: 'file-earmark-play',
-              children: [
-                { text: 'Introduction', link: '/introduction', icon: 'cup' },
-                { text: 'Installation', link: '/install', icon: 'wrench' },
-                { text: 'Basic usage', link: '/usage', icon: 'command' }
-              ]
-            },
-            { text: 'Icons', link: '/icons', icon: 'bootstrap' },
-            {
-              text: 'Layout Component',
-              link: '/integrate',
-              icon: 'layout-sidebar'
-            }
+            { text: 'Introduction', link: '/introduction', icon: 'cup' },
+            { text: 'Installation', link: '/install', icon: 'wrench' },
+            { text: 'Basic usage', link: '/usage', icon: 'command' }
           ]
         },
+        { text: 'Icons', link: '/icons', icon: 'bootstrap' },
+        {
+          text: 'Layout Component',
+          link: '/integrate',
+          icon: 'layout-sidebar'
+        },
+        //   ]
+        // },
         {
           name: 'API',
           children: [

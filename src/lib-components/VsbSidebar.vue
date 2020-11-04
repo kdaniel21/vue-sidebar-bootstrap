@@ -118,9 +118,22 @@ export default {
   },
   computed: {
     sections() {
-      return this.items[0].name
-        ? this.items
-        : [{ name: null, children: [...this.items] }];
+      const sections = [];
+      const emptySection = { name: null, children: [] };
+
+      this.items.forEach(section => {
+        // If not section title, just add to the empty list
+        if (!section.name) return emptySection.children.push(section);
+
+        // Close empty section and add to final list if it contains children
+        if (emptySection.children.length) {
+          sections.push({ ...emptySection });
+          emptySection.children = [];
+        }
+        sections.push(section);
+      });
+
+      return sections;
     }
   }
 };
