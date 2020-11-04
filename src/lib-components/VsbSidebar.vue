@@ -33,10 +33,16 @@
           :key="section.name"
         >
           <slot name="section-title">
-            <h6 class="ml-2">{{ section.name }}</h6>
+            <h6 :class="['ml-2', { 'text-muted': section.disabled }]">
+              {{ section.name }}
+            </h6>
           </slot>
           <div v-for="(item, index) in section.children" :key="item.text">
-            <vsb-sidebar-item :item="item" :index="index">
+            <vsb-sidebar-item
+              :section-disabled="section.disabled"
+              :item="item"
+              :index="index"
+            >
               <slot name="dropdown-icon" :item="item" :index="index">
                 <vsb-sidebar-item-icon
                   v-if="item.children"

@@ -5,7 +5,7 @@
     v-b-toggle="item.children ? `nav-item-${index}` : null"
     active-class="active"
     exact
-    :disabled="item.disabled"
+    :disabled="item.disabled || sectionDisabled"
   >
     <span>
       <vsb-sidebar-item-icon :icon="item.icon" class="mr-3" />
@@ -30,6 +30,10 @@ export default {
       default: null
     },
     textSmall: {
+      type: Boolean,
+      default: false
+    },
+    sectionDisabled: {
       type: Boolean,
       default: false
     }
