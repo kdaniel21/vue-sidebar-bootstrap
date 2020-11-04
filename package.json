@@ -1,6 +1,6 @@
 {
   "name": "vue-sidebar-bootstrap",
-  "version": "1.0.17",
+  "version": "1.0.18",
   "description": "Create a mobile friendly sidebar layout for Bootstrap Vue.",
   "author": "Daniel Kiss",
   "keywords": [
@@ -30,7 +30,8 @@
     "build": "cross-env NODE_ENV=production rollup --config build/rollup.config.js",
     "build:ssr": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format cjs",
     "build:es": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format es",
-    "build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife"
+    "build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife",
+    "publish:package": "npm run build && npm publish"
   },
   "dependencies": {
     "bootstrap": "^4.5.3",
