@@ -42,7 +42,7 @@
           </slot>
           <div v-for="(item, index) in section.children" :key="item.text">
             <vsb-sidebar-item :item="item" :index="index">
-              <slot name="dropdown-icon">
+              <slot name="dropdown-icon" :item="item" :index="index">
                 <vsb-sidebar-item-icon
                   v-if="item.children"
                   v-b-toggle="`nav-item-${index}`"
@@ -77,11 +77,11 @@
 </template>
 
 <script>
-import VsbSidebarItem from '@/components/VsbSidebarItem';
-import VsbSidebarItemIcon from '@/components/VsbSidebarItemIcon';
+import VsbSidebarItem from './VsbSidebarItem.vue';
+import VsbSidebarItemIcon from './VsbSidebarItemIcon.vue';
 
 export default {
-  name: 'Sidebar',
+  name: 'VsbSidebar',
   props: {
     items: {
       type: Array,

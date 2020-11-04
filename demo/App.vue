@@ -24,7 +24,7 @@
 </template>
 
 <script>
-import Layout from './components/Layout.vue';
+import Layout from '@/lib-components/VsbLayout.vue';
 
 export default {
   name: 'App',

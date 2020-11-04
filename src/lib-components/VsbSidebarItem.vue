@@ -16,10 +16,10 @@
 </template>
 
 <script>
-import VsbSidebarItemIcon from '@/components/VsbSidebarItemIcon';
+import VsbSidebarItemIcon from './VsbSidebarItemIcon.vue';
 
 export default {
-  name: 'VsbSidebarItem',
+  name: 'SidebarItem',
   props: {
     item: {
       type: Object,

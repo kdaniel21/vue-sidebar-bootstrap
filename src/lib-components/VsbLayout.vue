@@ -25,10 +25,10 @@
 </template>
 
 <script>
-import VsbSidebar from '@/components/VsbSidebar';
+import VsbSidebar from './VsbSidebar.vue';
 
 export default {
-  name: 'Layout',
+  name: 'VsbLayout',
   components: {
     VsbSidebar
   },
