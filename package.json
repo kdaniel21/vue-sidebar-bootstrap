@@ -15,6 +15,11 @@
     "vue bootstrap"
   ],
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kdaniel21/vue-sidebar-bootstrap.git"
+  },
+  "homepage": "https://vue-sidebar-bootstrap.netlify.app",
   "main": "dist/vue-sidebar-bootstrap.ssr.js",
   "browser": "dist/vue-sidebar-bootstrap.esm.js",
   "module": "dist/vue-sidebar-bootstrap.esm.js",
